@@ -1,0 +1,151 @@
+/* Default CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove default button styles (optional) */
+  button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background: none;
+    box-sizing: border-box;
+  }
+
+  textarea:focus, input:focus{
+    outline: none;
+  }
+  
+  /* Set default box-sizing */
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+:root {
+    --main-color: #24292f;
+    --header-font-color: #fff;
+  }
+
+.container {
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-inline: 10px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+/* mobile first */
+.main-nav {
+    color: var(--header-font-color);
+    background-color: var(--main-color);
+    line-height: 1.5;
+    padding-block: 12px;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-search input, .nav-search select {
+    padding: 8px;
+    font-size: 16px;
+    color: var(--header-font-color);
+    border : 1px solid gray;
+    border-radius: 10px;
+}
+
+.nav-search select option {
+    color: black;
+}
+
+.nav-search input:focus {
+    border : 1px solid var(--header-font-color);
+}
+
+.card-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.card-list .card {
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 30px 15px;
+}
+
+.card-list .card-image img {
+    border-radius: 15px;
+}
+
+.top-card .card-details h4{
+    margin-block: 10px 5px;
+}
+
+.bottom-card .instructions {
+    margin-top: 10px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 720px) {
+    .card-list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2%;
+    }
+
+    .card-list .card-image img {
+        height: 250px;
+    }
+
+    .top-card {
+        display: flex;
+        gap: 25px;
+    }
+}
+
+footer {
+    margin-top: 60px;
+    background-color: var(--main-color);
+    height: 60px;
+    padding-block: 12px;
+}
